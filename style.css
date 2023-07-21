@@ -1,0 +1,183 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    overflow: hidden;
+    height: 100vh;
+    background-image: url('bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    font-family: 'Tektur', cursive;
+}
+
+/* landing page */
+.landing-page{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white; 
+}
+@keyframes headingAnimation {
+    0%{
+        font-size: 50px;
+        color: white;
+    }
+    50%{
+        font-size: 52px;
+        color: rgb(240, 191, 203);
+    }
+    100%{
+        font-size: 50px;
+        color: white;
+    }
+}
+.heading{
+    font-size: 50px;
+    font-weight: bolder;
+    animation: headingAnimation 2s ease infinite;
+}
+.rule-heading{
+    color: rgb(209, 207, 207);
+}
+.you-comp{
+    color: rgb(92, 89, 89);
+}
+.line{
+    color: rgb(209, 207, 207);
+}
+
+/* cards page */
+#custom-cards{
+    display: none;
+}
+@keyframes cardHeadingAnimation {
+    0%{
+        font-size: 34px;
+    }
+    50%{
+        font-size: 36px;
+    }
+    100%{
+        font-size: 34px;
+    }
+}
+.card-heading{
+    animation: cardHeadingAnimation 2s ease infinite;
+}
+@keyframes cardAnimation {
+    0%{
+        font-size: 50px;
+    }
+    50%{
+        font-size: 52px;
+    }
+    100%{
+        font-size: 50px;
+    }
+}
+.card-text{
+    animation: cardAnimation 2s ease infinite;
+}
+.card{
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+.card:hover{
+    transform: translateY(-10px);
+}
+.card-container{
+    display: flex;
+    margin-top: 50px;
+    padding: 10px;
+}
+.card-body h5{
+    font-size: 40px;
+}
+
+/* result showing page */
+#result{
+    display: none;
+}
+@keyframes whoWonAnimation {
+    0%{
+        font-size: 55px;
+    }
+    50%{
+        font-size: 57px;
+    }
+    100%{
+        font-size: 55px;
+    }
+}
+#whoWon{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 55px;
+    animation: whoWonAnimation 2s ease infinite;
+}
+.lead{
+    font-size: 18px;
+    color: white;
+}
+
+/* landing page & result showing page */
+.btn{
+    box-shadow: 4px 4px 7px rgba(6, 6, 6);
+    border: 3px solid white;
+    font-weight: bolder;
+    font-size: 25px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.btn:hover{
+    font-size: 26px;
+    border: 3px solid white;
+}
+
+/* media queries */
+/* for landing page heading */
+@media(max-width:800px){
+    @keyframes headingAnimationResp {
+        0%{
+            font-size: 44px;
+            color: white;
+        }
+        50%{
+            font-size: 46px;
+            color: rgb(240, 191, 203);
+        }
+        100%{
+            font-size: 44px;
+            color: white;
+        }
+    }
+    .heading{
+        font-size: 44px;
+        animation: headingAnimationResp 2s ease infinite;
+        text-align: center;
+    }
+}
+/* for cards */
+@media(min-width:501px) and (max-width: 1100px){
+    .card-body h5{
+        font-size:18px;
+    }
+    .card-container{
+        margin-top: 90px;
+    }
+}
+@media(max-width:500px){
+    .card-container{
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+    }
+    .card{
+        margin-bottom: 10px;
+    }
+    .card-body h5{
+        font-size:15px;
+    }
+}
+    
