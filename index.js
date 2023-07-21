@@ -7,7 +7,7 @@ $("#play").on("click", function(){
 //when user clicks on any card(rock, paper or scissor)..
 $(".card").on("click", function(){
     //storing user's choice 
-    var userChoice = $(this).children().text();   //ROCK or PAPER or SCISSOR
+    var userChoice = $(this).children().children().text();   //ROCK or PAPER or SCISSOR
     //storing computer's choice 
     var options = ["ROCK", "PAPER", "SCISSOR"];
     var randomNumbers = Math.floor(Math.random() * 3);
